@@ -1,6 +1,6 @@
 baseURL = "https://parkzonegolf.com/"
 languageCode = "ko-kr"
-title = "PZ 파크골프"
+title = "파크존골프"
 theme = ""
 relativeURLs = false
 canonifyURLs = true
