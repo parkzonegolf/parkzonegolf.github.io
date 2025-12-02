@@ -1,4 +1,4 @@
-baseURL = "http://parkzonegolf.com/"
+baseURL = "https://parkzonegolf.com/"
 languageCode = "ko-kr"
 title = "PZ 파크골프"
 theme = ""
