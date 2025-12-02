@@ -1,0 +1,26 @@
+<header class="navbar is-fixed-top has-shadow has-background-white">
+  <div class="container">
+    <div class="navbar-brand">
+      <!-- ✅ 로고 -->
+      <a href="#hero" class="navbar-item">
+        <img src="{{ "images/logo.png" | relURL }}" alt="피지파크골프 로고" style="max-height: 50px !important; margin-right: 8px;">
+        <div class="is-flex is-align-items-center" style="height:100px;">
+          <span class="has-text-weight-bold is-size-3">피지파크골프</span>
+        </div>
+      </a>
+
+      <!-- ✅ 모바일 메뉴 버튼 -->
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="nvbarMenu" style="color:#fff">
+        <span></span><span></span><span></span>
+      </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-end">
+        <a href="#about" class="navbar-item has-text-weight-semibold">회사소개</a>
+        <a href="#product" class="navbar-item has-text-weight-semibold">제품소개</a>
+        <a href="#contact" class="navbar-item has-text-weight-semibold">설치문의</a>
+      </div>
+    </div>
+  </div>
+</header>
