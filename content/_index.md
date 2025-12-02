@@ -1,10 +1,10 @@
 +++
-title = "피지파크골프"
+title = "파크존골프"
 +++
 
 <section id="about">
 ## 회사 소개
-국내 파크골프 문화를 선도하는 피지파크골프.
+국내 파크골프 문화를 선도하는 파크존골프.
 </section>
 
 <section id="products">
