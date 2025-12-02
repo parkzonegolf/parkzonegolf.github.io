@@ -1,9 +1,9 @@
-name: Deploy Hugo site to Pages
+name: Deploy Hugo site to GitHub Pages
 
 on:
   push:
     branches:
-      - main  # main 브랜치에 push할 때만 실행
+      - main
 
 permissions:
   contents: read
@@ -18,32 +18,47 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 리포지토리 체크아웃
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: true  # 테마 포함
+          submodules: true
           fetch-depth: 0
 
+      # Hugo 설치
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: "latest"
           extended: true
 
-      - name: Build Hugo site
-        run: hugo --minify
+      # public 폴더 완전 삭제
+      - name: Clean public folder
+        run: rm -rf public/*
 
+      # Hugo 빌드 (baseURL 강제 지정)
+      - name: Build Hugo site
+        run: hugo --minify --baseURL="https://parkzonegolf.com/"
+
+      # robots.txt 덮어쓰기 (확실하게 회사 도메인 URL 적용)
+      - name: Copy custom robots.txt
+        run: |
+          echo "User-agent: *" > public/robots.txt
+          echo "Allow: /" >> public/robots.txt
+          echo "Sitemap: https://parkzonegolf.com/sitemap.xml" >> public/robots.txt
+
+      # Hugo 빌드 결과 업로드
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment

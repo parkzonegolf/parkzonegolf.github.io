@@ -4,17 +4,22 @@ title = "파크존골프"
 theme = ""
 relativeURLs = false
 canonifyURLs = true
+enableRobotsTXT = true
+
+# Home page output 설정
+[outputs]
+home = ["HTML", "RSS", "SITEMAP"]
 
 [params]
   navbarLogo = "images/logo.png"
   custom_css = ["css/custom.css"]
-  
-  [[menu.main]]
-    name = "회사 소개"
-    url = "#about"
-  [[menu.main]]
-    name = "제품 소개"
-    url = "#products"
-  [[menu.main]]
-    name = "설치 문의"
-    url = "#contact"
+
+[[menu.main]]
+  name = "회사 소개"
+  url = "#about"
+[[menu.main]]
+  name = "제품 소개"
+  url = "#products"
+[[menu.main]]
+  name = "설치 문의"
+  url = "#contact"
