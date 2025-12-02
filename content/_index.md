@@ -1,5 +1,7 @@
 +++
 title = "파크존골프"
+draft = false
+outputs = ["HTML", "RSS", "SITEMAP"]
 +++
 
 <section id="about">
