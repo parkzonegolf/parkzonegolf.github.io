@@ -1,8 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://parkzonegolf.com/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <loc>https://parkzonegolf.com/contact/</loc>
+  </url><url>
+    <loc>https://parkzonegolf.com/product/</loc>
+  </url><url>
+    <loc>https://parkzonegolf.com/about/</loc>
   </url>
 </urlset>
