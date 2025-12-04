@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>제품 소개 on 파크존골프</title>
+    <link>https://parkzonegolf.com/product/</link>
+    <description>Recent content in 제품 소개 on 파크존골프</description>
+    <generator>Hugo</generator>
+    <language>ko-kr</language>
+    <atom:link href="https://parkzonegolf.com/product/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
